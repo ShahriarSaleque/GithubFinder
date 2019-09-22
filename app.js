@@ -20,6 +20,9 @@ function getUser(e) {
       } else {
         //Show profile
         ui.showProfile(data.profile);
+
+        //Show latest repos
+        ui.showRepos(data.repo);
       }
     });
   } else {
