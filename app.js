@@ -1,6 +1,9 @@
 //Instantiate object of github class
 const github = new Github();
 
+//Instantiate object of UI class
+const ui = new UI();
+
 //Get the searchUser
 document.getElementById("searchUser").addEventListener("keyup", getUser);
 
@@ -15,6 +18,7 @@ function getUser(e) {
         //Show alert UI
       } else {
         //Show profile
+        ui.showProfile(data.profile);
       }
     });
   } else {
