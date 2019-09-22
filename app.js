@@ -16,6 +16,7 @@ function getUser(e) {
       //Check to see if a profile is returned
       if (data.profile.message == "Not Found") {
         //Show alert UI
+        ui.showAlert("User not found", "alert alert-danger");
       } else {
         //Show profile
         ui.showProfile(data.profile);
@@ -23,5 +24,6 @@ function getUser(e) {
     });
   } else {
     //clear profile UI field
+    ui.clearProfile();
   }
 }
